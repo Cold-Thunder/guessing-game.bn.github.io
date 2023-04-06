@@ -79,6 +79,6 @@ restart.addEventListener('click', () => {
     lose = 0;
     won = 0;
 
-    document.querySelector('.display-score').innerHTML = ``;
+    document.querySelector('.display').innerHTML = ``;
 
 })
