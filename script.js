@@ -21,7 +21,22 @@ btn.addEventListener('click', () => {
         number = parseInt(Math.random() * 5 + 1);
         chc -= 1;
     } else if (chc == 0 || btn.classsList.contains('btn')) {
+
+
+
+
         notice.innerHTML = `<b>তোর দম শেষ!</b>🤪 যা ভাগ এইখান থেকে `;
+        document.querySelector('.display').innerHTML = 
+        `<div class="display-score">
+        <div class="score">
+        <p class="sore-para"><b>তোর খেলার যোগ্যতা দেখ এবারঃ🤣</b></p>
+        <p class="win">তুই জিতছস <b>${won}</b> বার</p>
+        <p class="lost">তুই হারছস <b>${lose}</b> বার</p>
+        </div>
+        </div>
+        `;
+
+
         btn.classList.remove('btn');
         btn.classList.add('btn-deactive');
         btn.removeEventListener('click');
@@ -44,17 +59,7 @@ btn.addEventListener('click', () => {
     
     input.value = '';
 
-    if(chc == 0){    
-        document.querySelector('.display').innerHTML = 
-        `<div class="display-score">
-        <div class="score">
-        <p class="sore-para"><b>তোর খেলার যোগ্যতা দেখ এবারঃ🤣</b></p>
-        <p class="win">তুই জিতছস <b>${won}</b> বার</p>
-        <p class="lost">তুই হারছস <b>${lose}</b> বার</p>
-        </div>
-        </div>
-        `;
-    }
+    
 })
 
 //let disSec = document.querySelector('.display-sec');
